@@ -13,14 +13,28 @@
         <div align="left">
             <h1>Logowanie</h1><br>
             <span>Nazwa użytkownika</span><br>
-            <input type="text" placeholder="admin"><br>
+            <input type="text" placeholder="admin" id="nazwa"><br>
             <span>hasło</span><br>
-            <input type="password" placeholder="wprowadź hasło"><br>
-            <button class="btn btn-info">zaloguj</button>
+            <input type="password" placeholder="wprowadź hasło" id="pas"><br>
+            <button class="btn btn-info" onclick="logowanie()">zaloguj</button>
         </div>
         
     </div>
+<script>
+    function logowanie(){
+        let nazwa = document.getElementById('nazwa').value;
+        let pas = document.getElementById('pas').value;
+        if(nazwa == "witam" && pas == "dawid"){
+            open("sklep.html", "_self");
+            
 
+        }
+        else{
+            alert("bledne haslo lub nazwa pzdr");
+        }
+    }
+
+</script>
 
 </body>
 </html>
