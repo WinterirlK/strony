@@ -1,0 +1,10 @@
+.zdj { 
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+div div img {
+    min-width: 300px;
+    max-width: 450px;
+    max-height: 300px;
+}

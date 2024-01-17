@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="stylesklep.css">
+</head>
+<body>
+
+
+<div class="zdj">
+    <div class="xd">
+        <img src="pietrucha.png" alt=""><br>
+        <span style="font-weight: bold">Produkt 1</span><br>
+        <input type="number" id="produkt1"><br>
+        <span>Cena: 25zł</span><br>
+        <input type="button" id ="1" class="btn btn-info" value="Dodaj do koszyka" onclick="funkcja(1)">
+    </div>
+    
+    
+    <div class="xd">
+        <img src="marchewa.png" alt=""><br>
+        <span style="font-weight: bold">Produkt 2</span><br>
+        <input type="number" id="produkt2"><br>
+        <span>Cena: 5zł</span><br>
+        <input type="button" id="2"class="btn btn-info"value="Dodaj do koszyka" onclick="funkcja(2)"><br>
+    </div>
+    
+    
+    <div class="xd">
+        <img src="tynk.png" alt=""><br>
+        <span style="font-weight: bold">Produkt 3</span><br>
+        <input type="number" id="produkt3"><br>
+        <span>Cena: 10zł</span><br>
+        <input type="button" id="3"class="btn btn-info" value="Dodaj do koszyka " onclick="funkcja(3)"><br>
+    </div>
+</div>
+<hr>
+<span>Kod rabatowy: </span> 
+<input type="text" id="kod"> <input type="button" class="btn btn-info" value="zastosuj" onclick="rabat">
+<h1>Koszyk</h1>
+<p id="wynik"></p>
+<ol id="lista">
+
+
+</ol>
+
+<script>
+    var wynik = 0;
+    var id = 0;
+function funkcja(n) {
+    let produkt = parseInt(document.getElementById('' + n).value);
+    let rabat = document.getElementById('kod').value;
+    
+    let ilosc = parseInt(document.getElementById('produkt' + n).value);
+    let ceny = [25, 5, 10];
+    
+
+    wynik += ilosc * ceny[n - 1];
+    id +=1;
+    if(rabat == "witam"){
+     wynik = wynik * 0.9;   
+    }
+    document.getElementById('wynik').innerHTML = '<h3>Suma do zapłaty:</h3>'  + wynik;
+    document.getElementById('lista').innerHTML += "<li>Produkt"+n+"</li>"+ceny[n-1]+"<input type='button' class='btn btn-info'value ='usun'>";
+}
+
+
+
+</script>
+
+</body>
+</html>
