@@ -12,4 +12,24 @@
     <h1 [style.background-color]="kolor" [style.text-align]="jak">Tekst</h1>
     
     <button (click)="zmienKolor()" type="button" [class.przycisk]="aktywna">Zmien kolor tła</button>
+
 </section>
+<p>wartosc domu polozonego przy ulicy Mickiewicza {{posesja}} o metrazu {{metraz}}</p>
+
+<button (click)="stala()">zamien</button>
+        <p>kobieta = {{kobieta}}  mezczyzna = {{facet}}</p>
+<br>
+
+<input type="number" id="liczba">
+<button (click)="getValue()">Get Value</button>
+<p>{{ poprawne }}</p>
+<br><br>
+
+<input type="number" id="liczba2">
+<button (click)="getValue2()">Get Value</button>
+<p>{{ poprawne2 }}</p>
+
+<input type="number" id="liczba3">
+<input type="checkbox" id="check" value="czy masz polskie obywatelstwo?">
+<button (click)="getValue3()">Get Value</button>
+<p>{{ poprawne3 }}</p>
